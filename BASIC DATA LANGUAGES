@@ -1,14 +1,40 @@
 DATA DEFINITION AND MANIPULATION LANGUAGE; (ALTER IS MISSING)
 
-CREATE TABLE EMP(ID INT PRIMARY KEY , NAME VARCHAR(100), SALARY DECIMAL);  // create table
+-- this is table create command --
+CREATE TABLE EMP(ID INT PRIMARY KEY , NAME VARCHAR(100), SALARY DECIMAL); 
+
+
+-- display all the data from emp
 select * FROM EMP;
+
+
+-- show all the tables in database
 SHOW TABLES;
+
+-- insert into emp 
 INSERT INTO EMP  (ID,NAME,SALARY)VALUES
 	(101, 'Rohan Mehra', 75000.00),
     (102, 'Priya Desai', 82500.50),
     (103, 'Vikram Singh', 68000.75),
     (104, 'Sneha Kapoor', 91200.00),
     (105, 'Arjun Reddy', 60500.25);
+    
+    
+-- update the data in table
 UPDATE EMP SET SALARY = 76000 WHERE ID=101;
+
+-- delete the table
 DELETE FROM EMP WHERE ID=105;
+
+
+-- change the attribute of table
+ALTER TABLE EMP ADD EMAIL VARCHAR(100);
+
+-- update the data in the table
+UPDATE EMP SET EMAIL = "VARAD@GMAIL.COM" WHERE ID =101;
+-- display the data from table
 select * FROM EMP;
+
+-- drop the table from db along with this data
+DROP TABLE EMP;
+SHOW TABLES;
